@@ -34,10 +34,10 @@ export class AppModule { }
 ## Drawing Bar Chart
 
 ```<ng-d3-bar-chart  
-                 [data]="data | async"  
-                 [xAxis]="'letter'"  
-                 [yAxis]="'frequency'"  
-                 [options]="chartOptions">  
+  [data]="data | async"  
+  [xAxis]="'letter'"  
+  [yAxis]="'frequency'"  
+  [options]="chartOptions">  
 </ng-d3-bar-chart>```  
 
 - data: the data to be plotted in Bar Chart. must be an array of objects.
