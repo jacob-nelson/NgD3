@@ -2,23 +2,45 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name --project NgD3` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project NgD3`.
-> Note: Don't forget to add `--project NgD3` or else it will be added to the default project in your `angular.json` file. 
+Run `npm i @jacobnelson/ng-d3` from command prompt
 
-## Build
+## How to include NgD3 in your Application?
 
-Run `ng build NgD3` to build the project. The build artifacts will be stored in the `dist/` directory.
+- open app.module.ts file
+- import module using the command `import { NgD3Module } from '@jacobnelson/ng-d3';`
+- add to `imports` in `@NgModule`.  
+Your final code should look like this.  
 
-## Publishing
 
-After building your library with `ng build NgD3`, go to the dist folder `cd dist/ng-d3` and run `npm publish`.
+`import { NgModule } from "@angular/core";
+import { AppComponent } from "./app.component";
+import { NgD3Module } from '@jacobnelson/ng-d3';
 
-## Running unit tests
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    NgD3Module
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+`
 
-Run `ng test NgD3` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Drawing Bar Chart
 
-## Further help
+`<ng-d3-bar-chart [data]="data | async" [xAxis]="'letter'" [yAxis]="'frequency'" [options]="chartOptions">
+        </ng-d3-bar-chart>`  
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- data: the data to be plotted in Bar Chart. must be an array of objects.
+- xAxis: key/value from data to be considered to plot xAxis of the graph
+- yAxis: key/value from data to be considered to plot yAxis of the graph
+- options: An object which holds other options. Currently only width is supported. height of the graph will be proportional to width.
+
+`    chartOptions = {
+      width: '700'
+    }`

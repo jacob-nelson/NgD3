@@ -1,6 +1,6 @@
 {
   "name": "@jacobnelson/ng-d3",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A module which help you to integrate D3 JS Library with your Angular Application",
   "keywords": ["angular", "typescript", "D3", "Bar Chart"],
   "license": "Apache License 2.0",
