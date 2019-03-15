@@ -14,7 +14,8 @@ Run `npm i @jacobnelson/ng-d3` from command prompt
 Your final code should look like this.  
 
 
-```import { NgModule } from "@angular/core";  
+```
+import { NgModule } from "@angular/core";  
 import { AppComponent } from "./app.component";  
 import { NgD3Module } from '@jacobnelson/ng-d3';  
 
@@ -33,17 +34,26 @@ export class AppModule { }
 
 ## Drawing Bar Chart
 
-```<ng-d3-bar-chart [data]="data | async" [xAxis]="'letter'" [yAxis]="'frequency'" [options]="chartOptions"></ng-d3-bar-chart>```  
+```
+<ng-d3-bar-chart  
+  [data]="data | async"  
+  [xAxis]="'letter'"  
+  [yAxis]="'frequency'"  
+  [options]="chartOptions">  
+</ng-d3-bar-chart>
+```  
 
 - data: the data to be plotted in Bar Chart. must be an array of objects.
 - xAxis: key/value from data to be considered to plot xAxis of the graph
 - yAxis: key/value from data to be considered to plot yAxis of the graph
 - options: An object which holds other options. Currently only width and label texts are supported. height of the graph will be proportional to width.
 
-```chartOptions = {  
+```
+chartOptions = {  
   'width': '700',  
   'label': {  
     'x': 'letter',  
     'y': 'frequency'  
   }  
-}```  
+}
+```  
