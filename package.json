@@ -3,8 +3,15 @@
   "version": "0.0.2",
   "description": "A module which help you to integrate D3 JS Library with your Angular Application",
   "keywords": ["angular", "typescript", "D3", "Bar Chart"],
-  "license": "MIT",
+  "license": "Apache License 2.0",
   "author": "Jacob Nelson",
+  "repository":{
+    "type": "git",
+    "url": "https://github.com/jacob-nelson/NgD3.git"
+  },
+  "issues":{
+    "url": "https://github.com/jacob-nelson/NgD3/issues"
+  }
   "dependencies": {
     "d3": "^5.9.1"
   },
