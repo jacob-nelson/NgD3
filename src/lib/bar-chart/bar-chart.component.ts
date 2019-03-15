@@ -104,7 +104,7 @@ export class BarChartComponent implements OnInit, OnChanges {
       .attr('text-anchor', 'end')
       .attr('transform', 'rotate(-90)')
       .attr('transform-origin', transformOrigin)
-      .text('Frequency');
+      .text(options.label.y);
 
     g.selectAll('.bar')
       .data(data)

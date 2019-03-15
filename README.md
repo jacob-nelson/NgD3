@@ -39,8 +39,12 @@ export class AppModule { }
 - data: the data to be plotted in Bar Chart. must be an array of objects.
 - xAxis: key/value from data to be considered to plot xAxis of the graph
 - yAxis: key/value from data to be considered to plot yAxis of the graph
-- options: An object which holds other options. Currently only width is supported. height of the graph will be proportional to width.
+- options: An object which holds other options. Currently only width and label texts are supported. height of the graph will be proportional to width.
 
-`    chartOptions = {
-      width: '700'
-    }`
+`chartOptions = {
+  'width': '700',
+  'label': {
+    'x': 'letter',
+    'y': 'frequency'
+  }
+}`

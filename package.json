@@ -11,7 +11,7 @@
   },
   "issues":{
     "url": "https://github.com/jacob-nelson/NgD3/issues"
-  }
+  },
   "dependencies": {
     "d3": "^5.9.1"
   },
